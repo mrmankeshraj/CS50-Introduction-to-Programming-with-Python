@@ -3,13 +3,13 @@ def coke(amount: int):
 
     while True:
     
-    if amount in [25, 10, 5]:
-        due = total - amount
-        total = due
-        continue
-    else:
-        due = 50
-    return due
+        if amount in [25, 10, 5]:
+            due = total - amount
+            total = due
+            continue
+        else:
+            due = 50
+        return due
 
 def main():
     print("Amount Due: 50")
