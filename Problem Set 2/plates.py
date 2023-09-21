@@ -7,10 +7,34 @@ def main():
 
 
 def is_valid(s):
-    if (2 <= len(s) <= 6) and s[:3].isalpha():
-        valid = True
+    if len(s) < 2 or len(s) > 6:
+        return False
+    
+    if s[0].isalpha() == False or s[1].isalpha == False:
+        return False
+    
+    i = 0
+    while i < len(s):
+        if s[i].isalpha() == False:
+            if s[i] == "0":
+                return False
+            else:
+                break
+        i += 1
 
-    if s.beginswith(isalpha()) and s.endswith(isnum())
+    j = 0
+    while j < len(s):
+        if s[j].isnumeric() == True:
+            if s[j+1].isalpha() == True:
+                return False
+                
+        j += 1
+
+    for c in s:
+        if c in [".", " ", "!", "?"]:
+            return True
+    
+    return True
 
 
 if __name__ == "__main__":
